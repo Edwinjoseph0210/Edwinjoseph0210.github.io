@@ -355,8 +355,8 @@ html {
 
 .image1 {
     border-radius: 50%;
-    height: 240px;
-    width: 240px;
+    height: 400px;
+    width: 400px;
     object-fit: cover;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
