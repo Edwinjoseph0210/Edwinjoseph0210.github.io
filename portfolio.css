@@ -54,6 +54,10 @@ body {
     color: #1DA1F2;
 }
 
+.icons .fa-instagram {
+    color: #a70946;
+}
+
 /* Hover Effects with Black Shadow */
 .icons:hover {
     transform: translateY(-5px);
@@ -140,7 +144,7 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
     backdrop-filter: saturate(180%) blur(10px);
-    background-color: rgba(255, 255, 255, 0.95) !important;
+    background-color: rgba(130, 182, 246, 0.95) !important;
 }
 
 .navbar-brand {
