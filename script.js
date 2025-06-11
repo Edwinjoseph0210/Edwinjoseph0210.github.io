@@ -5,8 +5,8 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, MotionPathPlugin);
 window.addEventListener('load', () => {
     gsap.to('.loader', {
         opacity: 0,
-        duration: 1,
-        delay: 2,
+        duration: 0.5,
+        delay: 0,
         onComplete: () => {
             document.querySelector('.loader').style.display = 'none';
         }
@@ -57,8 +57,8 @@ document.addEventListener('mouseup', () => {
 gsap.from('.hero-content', {
     opacity: 0,
     y: 100,
-    duration: 1.5,
-    delay: 2.5,
+    duration: 1,
+    delay: 0,
     ease: 'power4.out'
 });
 
