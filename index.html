@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edwin Joseph</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="email.js"></script>
+    <link rel="stylesheet" href="styles.css?v=20240411">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-logo">EJ</div>
+        <div class="nav-links" id="navLinks">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#certificates" class="nav-link">Certificates</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-toggle" id="navToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-graphics">
+                <div class="graphic graphic-1"><i class="fas fa-code"></i></div>
+                <div class="graphic graphic-2"><i class="fas fa-laptop-code"></i></div>
+                <div class="graphic graphic-3"><i class="fas fa-terminal"></i></div>
+                <div class="graphic graphic-4"><i class="fas fa-database"></i></div>
+                <div class="graphic graphic-5"><i class="fas fa-server"></i></div>
+                <div class="graphic graphic-6"><i class="fas fa-mobile-alt"></i></div>
+                <div class="graphic graphic-7"><i class="fas fa-cloud"></i></div>
+                <div class="graphic graphic-8"><i class="fas fa-shield-alt"></i></div>
+                <div class="graphic graphic-9"><i class="fas fa-cogs"></i></div>
+                <div class="graphic graphic-10"><i class="fas fa-network-wired"></i></div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="name">Hi, I'm Edwin 👋</h1>
+                    <h2 class="hero-title"><span id="typed-role">Software Developer</span></h2>
+    
+                    <p class="hero-description">Full Stack Developer passionate about creating innovative web solutions. I love technology and how it transforms ideas into reality.</p>
+                    <a href="assets/Edwin_Joseph_Resume.pdf" class="download-resume-btn" download>
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+                <div class="tech-stack">
+                    <div class="tech-icon"><i class="fab fa-react"></i></div>
+                    <div class="tech-icon"><i class="fab fa-node-js"></i></div>
+                    <div class="tech-icon"><i class="fab fa-java"></i></div>
+                    <div class="tech-icon"><i class="fab fa-python"></i></div>
+                    <div class="tech-icon"><i class="fab fa-git-alt"></i></div>
+                    <div class="tech-icon"><i class="fab fa-aws"></i></div>
+                    <div class="tech-icon"><i class="fab fa-google"></i></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="section-header">
+                <h2>About</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a passionate Full Stack Developer with expertise in modern web technologies. With a strong foundation in both frontend and backend development, I create scalable and efficient web applications that deliver exceptional user experiences.</p>
+                    <div class="skills">
+                        <span class="skill">React</span>
+                        <span class="skill">Node.js</span>
+                        <span class="skill">JavaScript</span>
+                        <span class="skill">Java</span>
+                        <span class="skill">Spring Boot</span>
+                        <span class="skill">MySQL</span>
+                        <span class="skill">Firebase</span>
+                        <span class="skill">UI/UX</span>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="edwin.jpeg" alt="Edwin Joseph">
+                </div>
+            </div>
+        </section>
+
+        <section class="experience" id="experience">
+            <div class="section-header">
+                <h2>Experience</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3><i class="fas fa-brain experience-icon"></i> Lead Developer</h3>
+                        <p class="company">INFONOVA (Personal Project)</p>
+                        <p class="date">2024 - Present</p>
+                        <ul class="achievements">
+                            <li>Created an AI-based news platform with summarization, TTS, and web scraping.</li>
+                            <li>Implemented advanced NLP features for content analysis.</li>
+                            <li>Designed and developed scalable backend infrastructure.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3><i class="fas fa-paint-brush experience-icon"></i> Graphic Designer</h3>
+                        <p class="company">IEEE Student Branch</p>
+                        <p class="date">2024 - 2025</p>
+                        <ul class="achievements">
+                            <li>Designed promotional and event-related materials.</li>
+                            <li>Created engaging visuals for social media campaigns.</li>
+                            <li>Collaborated with team to ensure brand consistency.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3><i class="fas fa-palette experience-icon"></i> Design Lead</h3>
+                        <p class="company">CSI Student Chapter</p>
+                        <p class="date">2024 - Present</p>
+                        <ul class="achievements">
+                            <li>Led design for events, posters, and branding assets.</li>
+                            <li>Managed design projects from concept to completion.</li>
+                            <li>Mentored junior designers and provided creative direction.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3><i class="fas fa-pencil-ruler experience-icon"></i> Design Lead</h3>
+                        <p class="company">CSEA (Computer Science Engineering Association)</p>
+                        <p class="date">2024 - Present</p>
+                        <ul class="achievements">
+                            <li>Handled all major creative and design tasks for department events.</li>
+                            <li>Ensured high-quality visual content for all association activities.</li>
+                            <li>Coordinated with event organizers to meet design requirements.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3><i class="fas fa-code experience-icon"></i> Intern - Website Building</h3>
+                        <p class="company">NextGen Pro Innovations</p>
+                        <p class="date">2023 - 1 Month</p>
+                        <ul class="achievements">
+                            <li>Contributed to the design, development, and deployment of web and mobile apps.</li>
+                            <li>Utilized PHP, Python, Django, and React.js for various projects.</li>
+                            <li>Assisted in optimizing application performance and user experience.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+            <div class="section-header">
+                <h2>Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Infonova</h3>
+                        <p>Full Stack Development • React • Firebase</p>
+                        <p class="project-description">A comprehensive information management system with real-time data synchronization, user authentication, and advanced features. Implemented efficient data handling and modern UI components.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Firebase</span>
+                            <span>Material-UI</span>
+                            <span>Redux</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Edwinjoseph0210" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>FOSS Day Project</h3>
+                        <p>Full Stack Development • React • Node.js</p>
+                        <p class="project-description">A comprehensive web application for FOSS Day, focusing on open-source contributions and community engagement. Implemented real-time features and modern UI/UX design principles.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Socket.io</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Edwinjoseph0210" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Movie Recommendation System</h3>
+                        <p>Python • Machine Learning • Data Science</p>
+                        <p class="project-description">A sophisticated content-based movie recommendation system using machine learning algorithms and data analysis techniques.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Machine Learning</span>
+                            <span>Data Science</span>
+                            <span>Pandas</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Edwinjoseph0210/Movie-Recommendation-System" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Handwritten Digit Recognition</h3>
+                        <p>Python • Deep Learning • Computer Vision</p>
+                        <p class="project-description">A neural network model for recognizing handwritten digits using deep learning and computer vision techniques.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                            <span>Deep Learning</span>
+                            <span>Computer Vision</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Edwinjoseph0210/Handwritten-Digit-Recognition" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Stock Price Predictor</h3>
+                        <p>Python • Machine Learning • Data Analysis</p>
+                        <p class="project-description">A machine learning model for stock price prediction using historical data analysis and time series forecasting.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Machine Learning</span>
+                            <span>Data Analysis</span>
+                            <span>Time Series</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Edwinjoseph0210/Stock-Price-Predictor" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Fake News Detector</h3>
+                        <p>Python • Machine Learning • NLP</p>
+                        <p class="project-description">A machine learning model to detect fake news articles using natural language processing and text classification.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>NLP</span>
+                            <span>Machine Learning</span>
+                            <span>Text Classification</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Edwinjoseph0210/Fake-News-Detector" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Sentiment Analysis on Tweets</h3>
+                        <p>Python • NLP • Data Analysis</p>
+                        <p class="project-description">A natural language processing system for analyzing sentiment in tweets using machine learning algorithms.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>NLP</span>
+                            <span>Machine Learning</span>
+                            <span>Data Analysis</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Edwinjoseph0210/Sentiment-Analysis-on-Tweets-" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Voice Gender Recognition</h3>
+                        <p>Python • Audio Processing • Machine Learning</p>
+                        <p class="project-description">An AI system for gender recognition from voice samples using machine learning and audio processing techniques.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Audio Processing</span>
+                            <span>Machine Learning</span>
+                            <span>Signal Processing</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Edwinjoseph0210/Voice-Gender-Recognition" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Spam Email Classifier</h3>
+                        <p>Python • Machine Learning • Text Classification</p>
+                        <p class="project-description">An email spam detection system using machine learning and text classification algorithms.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Machine Learning</span>
+                            <span>NLP</span>
+                            <span>Text Classification</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Edwinjoseph0210/Spam-Email-Classifier" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Air Quality Monitor</h3>
+                        <p>Python • IoT • Data Analysis</p>
+                        <p class="project-description">An IoT-based air quality monitoring system with real-time data analysis and visualization.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>IoT</span>
+                            <span>Data Analysis</span>
+                            <span>Real-time Processing</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Edwinjoseph0210/Air-Quality-Monitor" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Simple Crypto Wallet Generator</h3>
+                        <p>Java • ECC • Cryptography</p>
+                        <p class="project-description">A secure ECC-based cryptocurrency wallet address generator with advanced cryptographic features and key management.</p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>ECC</span>
+                            <span>Cryptography</span>
+                            <span>Security</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Edwinjoseph0210/Simple-Crypto-Wallet-Address-Generator-ECC-based-" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>File Integrity Checker</h3>
+                        <p>Java • SHA-256 • Security</p>
+                        <p class="project-description">A robust file integrity verification system using SHA-256 hashing algorithm with real-time monitoring capabilities.</p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>SHA-256</span>
+                            <span>File System</span>
+                            <span>Security</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Edwinjoseph0210/File-Integrity-Checker-with-SHA-256-" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Expense Tracker</h3>
+                        <p>Python • Data Management • UI</p>
+                        <p class="project-description">A comprehensive expense tracking application with data visualization, reporting features, and budget management.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Data Analysis</span>
+                            <span>UI/UX</span>
+                            <span>Data Visualization</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Edwinjoseph0210/Expense-Tracker" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Simple Chat Server</h3>
+                        <p>Python • Networking • Socket Programming</p>
+                        <p class="project-description">A real-time chat application with client-server architecture, message encryption, and user authentication.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Socket Programming</span>
+                            <span>Networking</span>
+                            <span>Security</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Edwinjoseph0210/Simple-Chat-Server-and-Client" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>File Encryption Tool</h3>
+                        <p>Python • Cryptography • Security</p>
+                        <p class="project-description">A secure file encryption and decryption tool with multiple encryption algorithms and key management.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Cryptography</span>
+                            <span>Security</span>
+                            <span>File System</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Edwinjoseph0210/File-Encryption-Decryption-Tool" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Finance Tracker</h3>
+                        <p>Python • Financial Analysis • Data Management</p>
+                        <p class="project-description">A personal finance tracking system with budget management, expense analysis, and investment tracking.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Financial Analysis</span>
+                            <span>Data Management</span>
+                            <span>Data Visualization</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Edwinjoseph0210/finance_tracker" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Disk Usage Analyzer</h3>
+                        <p>Python • System Analysis • Data Visualization</p>
+                        <p class="project-description">A comprehensive tool for analyzing and visualizing disk space usage patterns with detailed reporting.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>System Analysis</span>
+                            <span>Data Visualization</span>
+                            <span>File System</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Edwinjoseph0210/Disk-Usage-Analyzer" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="certificates" id="certificates">
+            <div class="section-header">
+                <h2>Certificates</h2>
+            </div>
+            <div class="certificate-categories">
+                <div class="certificate-category">
+                    <h3>Technical Certifications</h3>
+                    <div class="certificates-grid">
+                        <div class="certificate-card" onclick="openCertificateModal('images/certificates/infosys certificate java.jpg', 'Infosys Java Development')">
+                            <img src="images/certificates/infosys certificate java.jpg" alt="Infosys Java">
+                            <div class="certificate-info">
+                                <h3>Infosys Java Development</h3>
+                                <p>Comprehensive training in Java programming, enterprise development, and best practices</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="openCertificateModal('images/certificates/redhat.jpg', 'Red Hat Certified')">
+                            <img src="images/certificates/redhat.jpg" alt="Red Hat">
+                            <div class="certificate-info">
+                                <h3>Red Hat Certified</h3>
+                                <p>Expertise in Linux system administration and enterprise open-source solutions</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="openCertificateModal('images/certificates/visual studio.jpeg', 'Visual Studio Development')">
+                            <img src="images/certificates/visual studio.jpeg" alt="Visual Studio">
+                            <div class="certificate-info">
+                                <h3>Visual Studio Development</h3>
+                                <p>Mastery in professional development tools and integrated development environments</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="openCertificateModal('images/certificates/prompt engineering.jpeg', 'Prompt Engineering')">
+                            <img src="images/certificates/prompt engineering.jpeg" alt="Prompt Engineering">
+                            <div class="certificate-info">
+                                <h3>Prompt Engineering</h3>
+                                <p>Advanced techniques in AI model interaction and optimization strategies</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="openCertificateModal('images/certificates/generative ai.jpeg', 'Generative AI')">
+                            <img src="images/certificates/generative ai.jpeg" alt="Generative AI">
+                            <div class="certificate-info">
+                                <h3>Generative AI</h3>
+                                <p>In-depth understanding of AI model architecture and implementation</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="openCertificateModal('images/certificates/certificate infosys.jpg', 'Infosys Training')">
+                            <img src="images/certificates/certificate infosys.jpg" alt="Infosys Certificate">
+                            <div class="certificate-info">
+                                <h3>Infosys Training</h3>
+                                <p>Professional development program in software engineering and industry practices</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card">
+                            <img src="images/certificates/google-cloud.png" alt="Google Cloud Skills Boost">
+                            <div class="certificate-info">
+                                <h3>Google Cloud Skills Boost</h3>
+                                <p>Professional certifications in cloud computing and Google Cloud Platform</p>
+                                <div class="certificate-links">
+                                    <a href="https://www.cloudskillsboost.google/profile/badges" target="_blank" class="certificate-link">
+                                        <i class="fas fa-external-link-alt"></i> View Certificates
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certificate-category">
+                    <h3>Competitions & Awards</h3>
+                    <div class="certificates-grid">
+                        <div class="certificate-card" onclick="openCertificateModal('images/certificates/Livewire Winner.jpg', 'Livewire Winner')">
+                            <img src="images/certificates/Livewire Winner.jpg" alt="Livewire Winner">
+                            <div class="certificate-info">
+                                <h3>Livewire Winner</h3>
+                                <p>First place in technical innovation and problem-solving competition</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="openCertificateModal('images/certificates/livewire participation.jpg', 'Livewire Participation')">
+                            <img src="images/certificates/livewire participation.jpg" alt="Livewire Participation">
+                            <div class="certificate-info">
+                                <h3>Livewire Participation</h3>
+                                <p>Active contribution in technical innovation and development challenges</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="openCertificateModal('images/certificates/ieee xtreme.jpg', 'IEEE Xtreme')">
+                            <img src="images/certificates/ieee xtreme.jpg" alt="IEEE Xtreme">
+                            <div class="certificate-info">
+                                <h3>IEEE Xtreme</h3>
+                                <p>Participation in global programming and problem-solving competition</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="openCertificateModal('images/certificates/Edwin Joseph SIH.jpeg', 'Smart India Hackathon')">
+                            <img src="images/certificates/Edwin Joseph SIH.jpeg" alt="Smart India Hackathon">
+                            <div class="certificate-info">
+                                <h3>Smart India Hackathon</h3>
+                                <p>National level innovation and problem-solving competition participation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certificate-category">
+                    <h3>Workshops & Training</h3>
+                    <div class="certificates-grid">
+                        <div class="certificate-card" onclick="openCertificateModal('images/certificates/Mulearn certificate.jpg', 'Mulearn Training')">
+                            <img src="images/certificates/Mulearn certificate.jpg" alt="Mulearn">
+                            <div class="certificate-info">
+                                <h3>Mulearn Training</h3>
+                                <p>Comprehensive training in modern web development and programming</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="openCertificateModal('images/certificates/EDWIN-C-and-Cpp-Participant-Certificate.jpg', 'C and C++ Workshop')">
+                            <img src="images/certificates/EDWIN-C-and-Cpp-Participant-Certificate.jpg" alt="C and C++">
+                            <div class="certificate-info">
+                                <h3>C and C++ Workshop</h3>
+                                <p>Advanced programming concepts and system-level development training</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="openCertificateModal('images/certificates/EDWIN-JOSEPH-Participant-Certificate.jpg', 'Programming Workshop')">
+                            <img src="images/certificates/EDWIN-JOSEPH-Participant-Certificate.jpg" alt="Programming Workshop">
+                            <div class="certificate-info">
+                                <h3>Programming Workshop</h3>
+                                <p>Advanced programming techniques and software development practices</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="openCertificateModal('images/certificates/Asthra 7 - Workshop Participation E-Certificate  480.jpg', 'Asthra Workshop')">
+                            <img src="images/certificates/Asthra 7 - Workshop Participation E-Certificate  480.jpg" alt="Asthra Workshop">
+                            <div class="certificate-info">
+                                <h3>Asthra Workshop</h3>
+                                <p>Technical workshop on emerging technologies and development tools</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="openCertificateModal('images/certificates/Asthra 7 - Workshop Participation E-Certificate  453.jpg', 'Asthra Workshop II')">
+                            <img src="images/certificates/Asthra 7 - Workshop Participation E-Certificate  453.jpg" alt="Asthra Workshop II">
+                            <div class="certificate-info">
+                                <h3>Asthra Workshop II</h3>
+                                <p>Advanced technical training in software development and implementation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certificate-category">
+                    <h3>Leadership & Volunteering</h3>
+                    <div class="certificates-grid">
+                        <div class="certificate-card" onclick="openCertificateModal('images/certificates/SKILL FORGE VOLUNTEERING.jpg', 'Skill Forge Volunteering')">
+                            <img src="images/certificates/SKILL FORGE VOLUNTEERING.jpg" alt="Skill Forge">
+                            <div class="certificate-info">
+                                <h3>Skill Forge Volunteering</h3>
+                                <p>Leadership in community development and technical skill enhancement</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="openCertificateModal('images/certificates/TedX.jpg', 'TedX Participation')">
+                            <img src="images/certificates/TedX.jpg" alt="TedX">
+                            <div class="certificate-info">
+                                <h3>TedX Participation</h3>
+                                <p>Contribution to thought leadership and public speaking initiatives</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="openCertificateModal('images/certificates/prayana.jpg', 'Prayana')">
+                            <img src="images/certificates/prayana.jpg" alt="Prayana">
+                            <div class="certificate-info">
+                                <h3>Prayana</h3>
+                                <p>Leadership in community engagement and social development</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="openCertificateModal('images/certificates/innobot.jpg', 'Innobot')">
+                            <img src="images/certificates/innobot.jpg" alt="Innobot">
+                            <div class="certificate-info">
+                                <h3>Innobot</h3>
+                                <p>Innovation in robotics and automation technology development</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certificate-category">
+                    <h3>Achievements</h3>
+                    <div class="certificates-grid">
+                        <div class="certificate-card" onclick="openCertificateModal('images/projects/Home Systems.png', 'Home Systems Project')">
+                            <img src="images/projects/Home Systems.png" alt="Home Systems">
+                            <div class="certificate-info">
+                                <h3>Home Systems Project</h3>
+                                <p>Innovation in smart home automation and IoT solutions</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="openCertificateModal('images/projects/Edwin Joseph (1).png', 'Professional Achievement')">
+                            <img src="images/projects/Edwin Joseph (1).png" alt="Achievement Certificate">
+                            <div class="certificate-info">
+                                <h3>Professional Achievement</h3>
+                                <p>Recognition for excellence in software development and innovation</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="openCertificateModal('images/projects/Edwin Joseph.png', 'Recognition Award')">
+                            <img src="images/projects/Edwin Joseph.png" alt="Recognition Award">
+                            <div class="certificate-info">
+                                <h3>Recognition Award</h3>
+                                <p>Acknowledgment for outstanding contributions to technology development</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="openCertificateModal('images/projects/White and Purple Certificate Template Awarded Best Employee of the Month.png', 'Excellence Award')">
+                            <img src="images/projects/White and Purple Certificate Template Awarded Best Employee of the Month.png" alt="Excellence Award">
+                            <div class="certificate-info">
+                                <h3>Excellence Award</h3>
+                                <p>Recognition for outstanding contributions in technical innovation and development</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="google-certifications" id="google-certifications">
+            <div class="section-header">
+                <h2>Google Cloud Achievements</h2>
+            </div>
+            <div class="google-certs-container">
+                <div class="google-cert-card">
+                    <div class="google-cert-info">
+                        <h3><i class="fab fa-google"></i> Google Cloud Skills Profile</h3>
+                        <p>Diamond League • 15,100 points</p>
+                        <ul class="achievement-list">
+                            <li>Multiple Google Cloud Foundations certifications</li>
+                            <li>Advanced AI and ML certifications</li>
+                            <li>Network Security and Infrastructure expertise</li>
+                        </ul>
+                        <div class="certificate-links">
+                            <a href="https://www.cloudskillsboost.google/public_profiles/0c49db0e-3df1-4ed0-8f44-2ea39712139b" target="_blank" class="certificate-link">
+                                <i class="fas fa-external-link-alt"></i> View Skills Profile
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="google-cert-card">
+                    <div class="google-cert-info">
+                        <h3><i class="fab fa-google"></i> Google Cloud Arcade Profile</h3>
+                        <p>Gold League • 15,850 points</p>
+                        <ul class="achievement-list">
+                            <li>Multiple Arcade Trivia achievements</li>
+                            <li>App Building with AppSheet certification</li>
+                            <li>Advanced AI Analysis credentials</li>
+                        </ul>
+                        <div class="certificate-links">
+                            <a href="https://www.cloudskillsboost.google/public_profiles/2ac978e6-997b-40ef-a668-67af2e402932" target="_blank" class="certificate-link">
+                                <i class="fas fa-external-link-alt"></i> View Arcade Profile
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="section-header">
+                <h2>Contact</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" required></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Let's Connect!</h3>
+                    <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/Edwinjoseph0210" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/edwin-joseph-0210" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com/edwinjoseph0210" target="_blank" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com/edwinjoseph0210" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>Thank you for visiting!</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/Edwinjoseph0210" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/edwinjoseph0210/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/its_me_eddy_02/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/eddyroger0210/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="copyright">© 2024 Edwin Joseph. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Certificate Modal -->
+    <div id="certificateModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <div class="modal-image-container">
+                <img id="modalImage" src="" alt="Certificate">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile Navigation Toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+            navToggle.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!nav.contains(e.target) && navLinks.classList.contains('show')) {
+                navLinks.classList.remove('show');
+                navToggle.classList.remove('active');
+            }
+        });
+
+        // Modal functionality
+        const modal = document.getElementById('certificateModal');
+        const modalImg = document.getElementById('modalImage');
+        const modalTitle = document.getElementById('modalTitle');
+        const closeBtn = document.getElementsByClassName('close-modal')[0];
+
+        function openCertificateModal(imageSrc, title) {
+            modal.style.display = "flex";
+            modalImg.src = imageSrc;
+            modalTitle.textContent = title;
+            document.body.style.overflow = "hidden";
+        }
+
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        modal.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                modal.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        });
+    </script>
+</body>
+</html>
