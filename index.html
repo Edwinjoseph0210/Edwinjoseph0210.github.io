@@ -51,11 +51,7 @@
                 <div class="hero-text">
                     <h1 class="name">Hi, I'm Edwin 👋</h1>
                     <h2 class="hero-title"><span id="typed-role">Software Developer</span></h2>
-    
                     <p class="hero-description">Full Stack Developer passionate about creating innovative web solutions. I love technology and how it transforms ideas into reality.</p>
-                    <a href="assets/Edwin_Joseph_Resume.pdf" class="download-resume-btn" download>
-                        <i class="fas fa-download"></i> Download Resume
-                    </a>
                 </div>
                 <div class="tech-stack">
                     <div class="tech-icon"><i class="fab fa-react"></i></div>
@@ -746,39 +742,53 @@
                 <h2>Contact</h2>
             </div>
             <div class="contact-content">
-                <div class="contact-form-container">
-                    <form id="contactForm" class="contact-form">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" required>
-                            <label for="name">Name</label>
+                <div class="contact-grid">
+                    <div class="contact-form-container">
+                        <form class="contact-form" id="contactForm" onsubmit="return false;">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required placeholder="Your email">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required placeholder="Your message"></textarea>
+                            </div>
+                            <button type="button" id="submitBtn" class="submit-btn">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="contact-image">
+                        <div class="contact-overlay">
+                            <h3>Let's Connect!</h3>
+                            <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
+                            <div class="social-links">
+                                <a href="https://github.com/Edwinjoseph0210" target="_blank" class="social-link">
+                                    <i class="fab fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                                <a href="https://www.linkedin.com/in/edwinjoseph0210/" target="_blank" class="social-link">
+                                    <i class="fab fa-linkedin"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="https://www.instagram.com/its_me_eddy_02/" target="_blank" class="social-link">
+                                    <i class="fab fa-twitter"></i>
+                                    <span>Twitter</span>
+                                </a>
+                                <a href="https://www.instagram.com/eddyroger0210/" target="_blank" class="social-link">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                            </div>
+                            <a href="assets/Edwin_Joseph_Resume.pdf" class="download-resume-btn" download target="_blank">
+                                <i class="fas fa-download"></i> Download My Resume
+                            </a>
                         </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" required>
-                            <label for="email">Email</label>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" required></textarea>
-                            <label for="message">Message</label>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
-                </div>
-                <div class="contact-info">
-                    <h3>Let's Connect!</h3>
-                    <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
-                    <div class="social-links">
-                        <a href="https://github.com/Edwinjoseph0210" target="_blank" class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/edwin-joseph-0210" target="_blank" class="social-link">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://twitter.com/edwinjoseph0210" target="_blank" class="social-link">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://instagram.com/edwinjoseph0210" target="_blank" class="social-link">
-                            <i class="fab fa-instagram"></i>
-                        </a>
                     </div>
                 </div>
             </div>
