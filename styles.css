@@ -336,20 +336,21 @@ body {
 
 .tech-stack {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
     margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .tech-icon {
-    font-size: 2rem;
-    color: var(--text-secondary);
-    transition: all 0.3s var(--transition);
+    font-size: 2.5rem;
+    color: var(--accent);
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .tech-icon:hover {
-    color: var(--accent);
     transform: translateY(-5px);
+    color: var(--text);
 }
 
 /* Section Styles */
@@ -1401,50 +1402,27 @@ section {
 .download-resume-btn {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 12px 24px;
-    background: var(--primary-color);
-    color: white;
+    gap: 0.6rem;
+    background: var(--accent);
+    color: var(--primary);
+    font-weight: 600;
+    padding: 0.9rem 2rem;
     border-radius: 8px;
     text-decoration: none;
-    font-weight: 500;
-    margin-top: 20px;
-    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    margin-left: 0.2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.3s var(--transition), color 0.3s var(--transition), transform 0.2s;
 }
 
 .download-resume-btn:hover {
+    background: var(--primary);
+    color: var(--accent);
+    border: 1px solid var(--accent);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .download-resume-btn i {
-    font-size: 1.2rem;
-}
-
-.social-links {
-    display: flex;
-    gap: 16px;
-    margin-top: 24px;
-}
-
-.social-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--primary-color);
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.social-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.social-link i {
     font-size: 1.2rem;
 } 
