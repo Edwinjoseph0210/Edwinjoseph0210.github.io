@@ -983,7 +983,7 @@ section {
 /* Footer */
 .main-footer {
     background: var(--secondary);
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 0.8rem;
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 0.9rem;
