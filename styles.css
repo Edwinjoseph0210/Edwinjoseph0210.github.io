@@ -1290,7 +1290,7 @@ section {
     /* Footer */
     .footer-content {
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 1.3rem;
         text-align: center;
         padding: 2rem 1rem;
     }
