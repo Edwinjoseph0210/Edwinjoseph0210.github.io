@@ -983,9 +983,10 @@ section {
 /* Footer */
 .main-footer {
     background: var(--secondary);
-    padding: 1.5rem 2rem;
+    padding: 0.5rem 1rem;
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
 }
 
 .footer-content {
@@ -994,14 +995,15 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
 }
 
 .footer-logo {
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: var(--accent);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
 }
 
 .footer-links {
@@ -1024,7 +1026,8 @@ section {
 
 .footer-social {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.3rem;
+    font-size: 1rem;
 }
 
 .footer-social a {
@@ -1434,4 +1437,10 @@ section {
 
 .download-resume-btn i {
     font-size: 1.2rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.3rem;
+    margin-top: 1.5rem;
 } 
