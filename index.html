@@ -20,6 +20,9 @@
     <link rel="icon" href="5075658.png" type="image/png">
 </head>
 <body>
+    <!-- Custom cursor elements required by script.js -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
     <nav class="main-nav">
         <div class="nav-logo">EJ</div>
         <div class="nav-links" id="navLinks">
@@ -974,6 +977,23 @@
             </div>
         </section>
 
+        <!-- Inline Certificate Viewer -->
+        <section id="certificateInline" class="certificate-inline section-hidden">
+            <div class="certificate-inline-inner">
+                <button id="certificateInlineClose" class="certificate-inline-close" aria-label="Close certificate">
+                    <i class="fas fa-times"></i>
+                </button>
+                <h3 id="certificateInlineTitle" class="certificate-inline-title"></h3>
+                <div class="certificate-inline-media">
+                    <img id="certificateInlineImage" alt="Certificate preview" />
+                </div>
+                <div class="certificate-inline-benefits">
+                    <h4>Key benefits</h4>
+                    <ul id="certificateInlineBenefits" class="benefits-list"></ul>
+                </div>
+            </div>
+        </section>
+
         <section class="google-certifications glow-bg fade-in-section" id="google-certifications">
             <div class="stars">
                 <span></span><span></span><span></span><span></span><span></span>
@@ -1125,6 +1145,7 @@
         // Mobile Navigation Toggle
         const navToggle = document.getElementById('navToggle');
         const navLinks = document.getElementById('navLinks');
+        const nav = document.querySelector('.main-nav');
 
         navToggle.addEventListener('click', () => {
             navLinks.classList.toggle('show');
@@ -1133,43 +1154,335 @@
 
         // Close mobile menu when clicking outside
         document.addEventListener('click', (e) => {
-            if (!nav.contains(e.target) && navLinks.classList.contains('show')) {
+            if (nav && !nav.contains(e.target) && navLinks.classList.contains('show')) {
                 navLinks.classList.remove('show');
                 navToggle.classList.remove('active');
             }
         });
 
-        // Modal functionality
+        // Modal elements for certificate enlargement
         const modal = document.getElementById('certificateModal');
         const modalImg = document.getElementById('modalImage');
         const modalTitle = document.getElementById('modalTitle');
-        const closeBtn = document.getElementsByClassName('close-modal')[0];
+        const closeBtn = document.querySelector('#certificateModal .close-modal');
+
+        const certificateBenefitsMap = {
+            'Infosys Java Development': [
+                'Strong OOP and collections foundations',
+                'Hands-on with enterprise patterns',
+                'Code quality and best practices'
+            ],
+            'Red Hat Certified': [
+                'Linux admin and shell proficiency',
+                'System hardening and automation basics',
+                'Operational troubleshooting'
+            ],
+            'Visual Studio Development': [
+                'Pro IDE workflows and debugging',
+                'Productivity extensions and tooling',
+                'Source control integration'
+            ],
+            'Prompt Engineering': [
+                'Structured prompting strategies',
+                'Evaluation and iteration techniques',
+                'Applied use-case design'
+            ],
+            'Generative AI': [
+                'Model capabilities and limits',
+                'Safety and prompt safeguards',
+                'Rapid prototyping workflows'
+            ],
+            'Infosys Training': [
+                'Software engineering lifecycle',
+                'Team collaboration basics',
+                'Documentation and reviews'
+            ],
+            'Livewire Winner': [
+                'Outcome-driven problem solving',
+                'Rapid prototyping under time',
+                'Team coordination'
+            ],
+            'Livewire Participation': [
+                'Exposure to competitive coding',
+                'Presentation of solutions',
+                'Peer collaboration'
+            ],
+            'IEEE Xtreme': [
+                'Global programming challenge',
+                'Algorithm and DS practice',
+                'Resilience under pressure'
+            ],
+            'Smart India Hackathon': [
+                'Real-world problem statements',
+                'Stakeholder-focused delivery',
+                'Scalable design thinking'
+            ],
+            'Mulearn Training': [
+                'Modern web dev fundamentals',
+                'Mentored practice tasks',
+                'Peer learning'
+            ],
+            'C and C++ Workshop': [
+                'Memory and pointers clarity',
+                'STL and tooling basics',
+                'Systems thinking'
+            ],
+            'Programming Workshop': [
+                'Structured problem-solving',
+                'Clean code habits',
+                'Testing mindset'
+            ],
+            'Asthra Workshop': [
+                'Emerging tech exposure',
+                'Hands-on lab sessions',
+                'Networking with peers'
+            ],
+            'Asthra Workshop II': [
+                'Applied practice extensions',
+                'Toolchain familiarity',
+                'Showcase-ready outputs'
+            ],
+            'Skill Forge Volunteering': [
+                'Community leadership',
+                'Event coordination',
+                'Mentorship experience'
+            ],
+            'TedX Participation': [
+                'Public speaking confidence',
+                'Storytelling for impact',
+                'Audience engagement'
+            ],
+            'Prayana': [
+                'Community engagement',
+                'Team collaboration',
+                'Initiative ownership'
+            ],
+            'Innobot': [
+                'Robotics prototyping',
+                'Sensors and control',
+                'Iterative design'
+            ],
+            'Home Systems Project': [
+                'IoT concepts and design',
+                'Edge-device integration',
+                'Usability considerations'
+            ],
+            'Professional Achievement': [
+                'Delivery excellence',
+                'Cross-functional collaboration',
+                'Result-oriented mindset'
+            ],
+            'Recognition Award': [
+                'Sustained performance',
+                'Quality and reliability',
+                'Positive impact'
+            ],
+            'Excellence Award': [
+                'Leadership in execution',
+                'High standards of craft',
+                'Role-model behaviors'
+            ]
+        };
 
         function openCertificateModal(imageSrc, title) {
-            modal.style.display = "flex";
-            modalImg.src = imageSrc;
-            modalTitle.textContent = title;
-            document.body.style.overflow = "hidden";
+            if (!modal || !modalImg || !modalTitle) { showLightbox(imageSrc, title); return; }
+            if (title) modalTitle.textContent = title;
+            if (imageSrc) modalImg.src = imageSrc;
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
         }
 
-        closeBtn.onclick = function() {
-            modal.style.display = "none";
-            document.body.style.overflow = "auto";
+        // Expose for inline onclick handlers present in markup
+        window.openCertificateModal = openCertificateModal;
+
+        // Safely reference optional inline viewer elements
+        const inlineSection = document.getElementById('certificateInline');
+        const inlineClose = document.getElementById('certificateInlineClose');
+        if (inlineClose && inlineSection) {
+            inlineClose.addEventListener('click', function () {
+                inlineSection.classList.add('section-hidden');
+                inlineSection.classList.remove('section-visible');
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    inlineSection.classList.add('section-hidden');
+                    inlineSection.classList.remove('section-visible');
+                }
+            });
         }
 
-        modal.onclick = function(event) {
-            if (event.target === modal) {
-                modal.style.display = "none";
-                document.body.style.overflow = "auto";
-            }
-        }
-
-        document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape") {
-                modal.style.display = "none";
-                document.body.style.overflow = "auto";
+        // Attach click listeners to certificate cards (bind after DOM is ready)
+        // Delegated handler (works even if inline onclicks are removed)
+        document.addEventListener('click', function(e){
+            const card = e.target.closest('.certificate-card');
+            if (!card) return;
+            e.preventDefault();
+            const imgEl = card.querySelector('img');
+            const infoTitle = card.querySelector('.certificate-info h3');
+            const src = imgEl ? imgEl.getAttribute('src') : '';
+            const title = infoTitle ? infoTitle.textContent.trim() : 'Certificate';
+            // Prefer built-in modal; fallback to lightweight lightbox
+            try {
+                openCertificateModal(src, title);
+            } catch (err) {
+                showLightbox(src, title);
             }
         });
+
+        // Safety: ensure modal starts hidden
+        modal.style.display = 'none';
+
+        // Close interactions
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function(){
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+        }
+        if (modal) {
+            modal.addEventListener('click', function(e){
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+        document.addEventListener('keydown', function(e){
+            if (e.key === 'Escape') {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Add zoom buttons to each certificate card
+        (function attachZoomButtons(){
+            var cards = document.querySelectorAll('.certificate-card');
+            cards.forEach(function(card){
+                if (card.querySelector('.cert-zoom-btn')) return; // already added
+                var btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'cert-zoom-btn';
+                btn.setAttribute('aria-label', 'Enlarge certificate');
+                btn.innerHTML = '<i class="fas fa-magnifying-glass" aria-hidden="true"></i>';
+                btn.title = 'View';
+                btn.addEventListener('click', function(e){
+                    e.preventDefault();
+                    e.stopPropagation();
+                    var imgEl = card.querySelector('img');
+                    var titleEl = card.querySelector('.certificate-info h3');
+                    var src = imgEl ? imgEl.getAttribute('src') : '';
+                    var title = titleEl ? titleEl.textContent.trim() : 'Certificate';
+                    openCertificateModal(src, title);
+                });
+                card.appendChild(btn);
+            });
+        })();
+
+        // Extra safety: delegated listener for dynamically added zoom buttons
+        document.addEventListener('click', function(e){
+            var zbtn = e.target.closest('.cert-zoom-btn');
+            if (!zbtn) return;
+            e.preventDefault();
+            e.stopPropagation();
+            var card = zbtn.closest('.certificate-card');
+            if (!card) return;
+            var imgEl = card.querySelector('img');
+            var titleEl = card.querySelector('.certificate-info h3');
+            var src = imgEl ? imgEl.getAttribute('src') : '';
+            var title = titleEl ? titleEl.textContent.trim() : 'Certificate';
+            try {
+                openCertificateModal(src, title);
+            } catch (err) {
+                showLightbox(src, title);
+            }
+        });
+
+        // Hard-bind on certificate images (capture) to guarantee enlargement
+        (function ensureImageClickWorks(){
+            var imgs = document.querySelectorAll('#certificates .certificate-card img');
+            imgs.forEach(function(img){
+                img.addEventListener('click', function(ev){
+                    ev.preventDefault();
+                    ev.stopPropagation();
+                    var card = img.closest('.certificate-card');
+                    var titleEl = card ? card.querySelector('.certificate-info h3') : null;
+                    var src = img.getAttribute('src');
+                    var title = titleEl ? titleEl.textContent.trim() : 'Certificate';
+                    try { openCertificateModal(src, title); } catch (e) { showLightbox(src, title); }
+                }, true);
+                // Additionally, attach a direct inline-style handler as a last resort
+                try {
+                    window.__enlargeCert = function(el){
+                        var card = el.closest('.certificate-card');
+                        var titleEl = card ? card.querySelector('.certificate-info h3') : null;
+                        var src = el.getAttribute('src');
+                        var title = titleEl ? titleEl.textContent.trim() : 'Certificate';
+                        try { openCertificateModal(src, title); } catch (e) { showLightbox(src, title); }
+                    };
+                    img.setAttribute('onclick','window.__enlargeCert(this)');
+                } catch (_) {}
+            });
+        })();
+
+        // Ultra-minimal lightbox fallback to guarantee enlargement
+        function showLightbox(src, title) {
+            if (!src) return;
+            let backdrop = document.getElementById('lbBackdrop');
+            if (!backdrop) {
+                backdrop = document.createElement('div');
+                backdrop.id = 'lbBackdrop';
+                backdrop.style.position = 'fixed';
+                backdrop.style.inset = '0';
+                backdrop.style.background = 'rgba(0,0,0,0.9)';
+                backdrop.style.display = 'flex';
+                backdrop.style.alignItems = 'center';
+                backdrop.style.justifyContent = 'center';
+                backdrop.style.zIndex = '10000';
+                backdrop.style.padding = '20px';
+                backdrop.innerHTML = '<img id="lbImg" alt="Certificate" style="max-width:100%;max-height:100%;box-shadow:0 10px 30px rgba(0,0,0,0.5);border-radius:8px;" />' +
+                    '<button id="lbClose" aria-label="Close" style="position:fixed;top:16px;right:16px;background:transparent;border:1px solid rgba(255,255,255,0.25);color:#fff;border-radius:8px;padding:8px 10px;cursor:pointer;">✕</button>';
+                document.body.appendChild(backdrop);
+                backdrop.addEventListener('click', function(e){ if (e.target === backdrop) hideLightbox(); });
+                document.getElementById('lbClose').addEventListener('click', hideLightbox);
+                document.addEventListener('keydown', function(e){ if (e.key === 'Escape') hideLightbox(); });
+            }
+            const img = document.getElementById('lbImg');
+            img.src = src;
+            img.alt = title || 'Certificate';
+            backdrop.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        function hideLightbox(){
+            const backdrop = document.getElementById('lbBackdrop');
+            if (backdrop) backdrop.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+
+    <!-- Simple, standalone lightbox overlay (new approach) -->
+    <div id="quickLightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:100000;justify-content:center;align-items:center;padding:20px;">
+        <img alt="Certificate" style="max-width:95vw;max-height:95vh;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,0.5);" />
+        <button id="quickLbClose" aria-label="Close" style="position:fixed;top:16px;right:16px;background:transparent;border:1px solid rgba(255,255,255,0.35);color:#fff;border-radius:8px;padding:8px 10px;cursor:pointer;">✕</button>
+    </div>
+    <script>
+        // Final, independent handler to guarantee enlargement
+        (function(){
+            var overlay = document.getElementById('quickLightbox');
+            var overlayImg = overlay ? overlay.querySelector('img') : null;
+            var closeBtn = document.getElementById('quickLbClose');
+            if (!overlay || !overlayImg || !closeBtn) return;
+            function show(src){ if(!src) return; overlayImg.src = src; overlay.style.display='flex'; document.body.style.overflow='hidden'; }
+            function hide(){ overlay.style.display='none'; document.body.style.overflow='auto'; }
+            document.addEventListener('click', function(ev){
+                var img = ev.target.closest('#certificates .certificate-card img');
+                if (!img) return;
+                ev.stopPropagation();
+                show(img.currentSrc || img.src);
+            }, true);
+            overlay.addEventListener('click', function(ev){ if (ev.target === overlay) hide(); });
+            closeBtn.addEventListener('click', hide);
+            document.addEventListener('keydown', function(ev){ if (ev.key === 'Escape') hide(); });
+        })();
     </script>
 </body>
 </html>

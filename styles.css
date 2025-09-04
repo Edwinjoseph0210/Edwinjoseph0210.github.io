@@ -786,6 +786,24 @@ section {
     overflow: hidden;
     transition: transform 0.3s var(--transition), box-shadow 0.3s var(--transition);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Always-visible magnifier badge (visual cue) */
+/* Always-visible, simple 'View' badge in image area */
+.certificate-card::after {
+    content: 'View';
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--primary);
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 600;
+    z-index: 3;
 }
 
 .certificate-card:hover {
@@ -841,6 +859,33 @@ section {
 
 .certificate-link i {
     font-size: 0.8rem;
+}
+
+/* Zoom button on certificates */
+.cert-zoom-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px; /* keep within image area at top of card */
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 0;
+    background: var(--accent); /* single colour */
+    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cert-zoom-btn i { font-size: 0.8rem; }
+
+.cert-zoom-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 
 /* Google Certifications Section */
@@ -1199,10 +1244,11 @@ section {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
-    z-index: 1000;
+    z-index: 9999;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    pointer-events: auto;
 }
 
 .modal-content {
@@ -1776,4 +1822,90 @@ section {
         padding: 0.7rem 1.5rem;
         font-size: 0.95rem;
     }
+}
+
+/* Inline Certificate Viewer */
+.certificate-inline {
+    padding: 4rem 2rem;
+}
+
+.certificate-inline-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--secondary);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+
+.certificate-inline-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--text);
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+}
+
+.certificate-inline-title {
+    margin: 0 0 1rem 0;
+    color: var(--accent);
+    font-size: 1.6rem;
+}
+
+.certificate-inline-media {
+    width: 100%;
+    background: var(--primary);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.certificate-inline-media img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.certificate-inline-benefits {
+    margin-top: 1.5rem;
+}
+
+.certificate-inline-benefits h4 {
+    margin-bottom: 0.75rem;
+}
+
+.benefits-list {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.benefits-list li {
+    color: var(--text-secondary);
+    margin: 0.25rem 0;
+}
+
+@media (max-width: 768px) {
+    .certificate-inline {
+        padding: 2rem 1rem;
+    }
+    .certificate-inline-inner {
+        padding: 1.25rem;
+    }
+    .certificate-inline-title {
+        font-size: 1.3rem;
+    }
+}
+
+/* Visibility helpers for inline viewer */
+.certificate-inline.section-hidden {
+    display: none;
+}
+.certificate-inline.section-visible {
+    display: block;
+    outline: 2px dashed rgba(100,255,218,0.3); /* temporary debug */
 }

@@ -3,12 +3,14 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, MotionPathPlugin);
 
 // Loader Animation
 window.addEventListener('load', () => {
-    gsap.to('.loader', {
+    const loaderEl = document.querySelector('.loader');
+    if (!loaderEl) return;
+    gsap.to(loaderEl, {
         opacity: 0,
         duration: 0.5,
         delay: 0,
         onComplete: () => {
-            document.querySelector('.loader').style.display = 'none';
+            loaderEl.style.display = 'none';
         }
     });
 });
@@ -18,39 +20,22 @@ const cursor = document.querySelector('.cursor');
 const cursorFollower = document.querySelector('.cursor-follower');
 
 document.addEventListener('mousemove', (e) => {
-    gsap.to(cursor, {
-        x: e.clientX,
-        y: e.clientY,
-        duration: 0.1
-    });
-    
-    gsap.to(cursorFollower, {
-        x: e.clientX,
-        y: e.clientY,
-        duration: 0.3
-    });
+    if (cursor) {
+        gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0.1 });
+    }
+    if (cursorFollower) {
+        gsap.to(cursorFollower, { x: e.clientX, y: e.clientY, duration: 0.3 });
+    }
 });
 
 document.addEventListener('mousedown', () => {
-    gsap.to(cursor, {
-        scale: 0.8,
-        duration: 0.1
-    });
-    gsap.to(cursorFollower, {
-        scale: 0.8,
-        duration: 0.1
-    });
+    if (cursor) gsap.to(cursor, { scale: 0.8, duration: 0.1 });
+    if (cursorFollower) gsap.to(cursorFollower, { scale: 0.8, duration: 0.1 });
 });
 
 document.addEventListener('mouseup', () => {
-    gsap.to(cursor, {
-        scale: 1,
-        duration: 0.1
-    });
-    gsap.to(cursorFollower, {
-        scale: 1,
-        duration: 0.1
-    });
+    if (cursor) gsap.to(cursor, { scale: 1, duration: 0.1 });
+    if (cursorFollower) gsap.to(cursorFollower, { scale: 1, duration: 0.1 });
 });
 
 // Hero Section Animation
@@ -108,8 +93,7 @@ gsap.from('.about-content', {
 
 // Contact Form Handling
 const contactForm = document.getElementById('contactForm');
-
-contactForm.addEventListener('submit', async (e) => {
+if (contactForm) contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     
     const formData = {
