@@ -17,13 +17,15 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="email.js"></script>
     <link rel="stylesheet" href="styles.css?v=20240411">
+    <link rel="icon" href="5075658.png" type="image/png">
 </head>
 <body>
     <nav class="main-nav">
         <div class="nav-logo">EJ</div>
         <div class="nav-links" id="navLinks">
+            <a href="#home" class="nav-link">Home</a>
             <a href="#about" class="nav-link">About</a>
-            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#tech-stack" class="nav-link">Tech Stack</a>
             <a href="#projects" class="nav-link">Projects</a>
             <a href="#certificates" class="nav-link">Certificates</a>
             <a href="#contact" class="nav-link">Contact</a>
@@ -34,7 +36,7 @@
     </nav>
 
     <main>
-        <section class="hero">
+        <section class="hero glow-bg fade-in-section">
             <div class="hero-graphics">
                 <div class="graphic graphic-1"><i class="fas fa-code"></i></div>
                 <div class="graphic graphic-2"><i class="fas fa-laptop-code"></i></div>
@@ -49,7 +51,7 @@
             </div>
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="name">Hi, I'm Edwin 👋🏻</h1>
+                    <h1 class="name">Hi, I'm Edwin 👋</h1>
                     <h2 class="hero-title"><span id="typed-role">Software Developer</span></h2>
                     <p class="hero-description">Full Stack Developer passionate about creating innovative web solutions. I love technology and how it transforms ideas into reality.</p>
                     <div class="tech-stack">
@@ -65,7 +67,10 @@
             </div>
         </section>
 
-        <section class="about" id="about">
+        <section class="about glow-bg fade-in-section" id="about">
+            <div class="stars">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
             <div class="section-header">
                 <h2>About</h2>
             </div>
@@ -89,7 +94,47 @@
             </div>
         </section>
 
-        <section class="experience" id="experience">
+        <section class="tech-stack-section glow-bg fade-in-section" id="tech-stack">
+            <div class="stars">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="tech-circle-container">
+                <div class="tech-circle">
+                    <div class="center-text">
+                        <div>Tech</div>
+                        <div>Stack</div>
+                    </div>
+                    <div class="tech-item" style="--i:0" data-name="React"><i class="fab fa-react"></i></div>
+                    <div class="tech-item" style="--i:1" data-name="Node.js"><i class="fab fa-node-js"></i></div>
+                    <div class="tech-item" style="--i:2" data-name="Java"><i class="fab fa-java"></i></div>
+                    <div class="tech-item" style="--i:3" data-name="Python"><i class="fab fa-python"></i></div>
+                    <div class="tech-item" style="--i:4" data-name="JavaScript"><i class="fab fa-js"></i></div>
+                    <div class="tech-item" style="--i:5" data-name="HTML5"><i class="fab fa-html5"></i></div>
+                    <div class="tech-item" style="--i:6" data-name="CSS3"><i class="fab fa-css3-alt"></i></div>
+                    <div class="tech-item" style="--i:7" data-name="Git"><i class="fab fa-git-alt"></i></div>
+                    <div class="tech-item" style="--i:8" data-name="GitHub"><i class="fab fa-github"></i></div>
+                    <div class="tech-item" style="--i:9" data-name="Docker"><i class="fab fa-docker"></i></div>
+                    <div class="tech-item" style="--i:10" data-name="C"><i class="fas fa-code"></i></div>
+                    <div class="tech-item" style="--i:11" data-name="MATLAB"><i class="fas fa-calculator"></i></div>
+                    <div class="tech-item" style="--i:12" data-name="Next.js"><i class="fab fa-react"></i></div>
+                    <div class="tech-item" style="--i:13" data-name="Web Dev"><i class="fas fa-globe"></i></div>
+                    <div class="tech-item" style="--i:14" data-name="App Dev"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="tech-item" style="--i:15" data-name="AI"><i class="fas fa-brain"></i></div>
+                    <div class="tech-item" style="--i:16" data-name="ML"><i class="fas fa-robot"></i></div>
+                    <div class="tech-item" style="--i:17" data-name="NLP"><i class="fas fa-language"></i></div>
+                    <div class="tech-item" style="--i:18" data-name="Network"><i class="fas fa-network-wired"></i></div>
+                    <div class="tech-item" style="--i:19" data-name="Socket"><i class="fas fa-plug"></i></div>
+                    <div class="tech-item" style="--i:20" data-name="TCP/UDP"><i class="fas fa-exchange-alt"></i></div>
+                    <div class="tech-item" style="--i:21" data-name="NS2"><i class="fas fa-project-diagram"></i></div>
+                    <div class="tech-item" style="--i:22" data-name="Protocol"><i class="fas fa-shield-alt"></i></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience glow-bg fade-in-section" id="experience">
+            <div class="stars">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
             <div class="section-header">
                 <h2>Experience</h2>
             </div>
@@ -157,337 +202,581 @@
             </div>
         </section>
 
-        <section class="projects" id="projects">
+        <section class="projects fade-in-section" id="projects">
             <div class="section-header">
                 <h2>Projects</h2>
             </div>
             <div class="projects-grid">
                 <div class="project-card">
+                    <div class="tech-logo-bg">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                    </div>
                     <div class="project-info">
                         <h3>Infonova</h3>
-                        <p>Full Stack Development • React • Firebase</p>
-                        <p class="project-description">A comprehensive information management system with real-time data synchronization, user authentication, and advanced features. Implemented efficient data handling and modern UI components.</p>
+                        <p>AI-powered news platform with real-time data sync and advanced NLP features.</p>
                         <div class="project-tech">
                             <span>React</span>
                             <span>Firebase</span>
-                            <span>Material-UI</span>
-                            <span>Redux</span>
+                            <span>NLP</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/Edwinjoseph0210" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
+                                <i class="fab fa-github"></i> Code
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
+                    <div class="tech-logo-bg">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                    </div>
                     <div class="project-info">
-                        <h3>FOSS Day Project</h3>
-                        <p>Full Stack Development • React • Node.js</p>
-                        <p class="project-description">A comprehensive web application for FOSS Day, focusing on open-source contributions and community engagement. Implemented real-time features and modern UI/UX design principles.</p>
+                        <h3>FOSS Day</h3>
+                        <p>Open-source community platform with real-time collaboration features.</p>
                         <div class="project-tech">
                             <span>React</span>
                             <span>Node.js</span>
-                            <span>MongoDB</span>
                             <span>Socket.io</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/Edwinjoseph0210" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
+                                <i class="fab fa-github"></i> Code
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
+                    <div class="tech-logo-bg">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    </div>
                     <div class="project-info">
-                        <h3>Movie Recommendation System</h3>
-                        <p>Python • Machine Learning • Data Science</p>
-                        <p class="project-description">A sophisticated content-based movie recommendation system using machine learning algorithms and data analysis techniques.</p>
+                        <h3>Movie Recommender</h3>
+                        <p>ML-based movie recommendation system with content analysis.</p>
                         <div class="project-tech">
                             <span>Python</span>
-                            <span>Machine Learning</span>
-                            <span>Data Science</span>
+                            <span>ML</span>
                             <span>Pandas</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/Edwinjoseph0210/Movie-Recommendation-System" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
+                                <i class="fab fa-github"></i> Code
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
+                    <div class="tech-logo-bg">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow">
+                    </div>
                     <div class="project-info">
-                        <h3>Handwritten Digit Recognition</h3>
-                        <p>Python • Deep Learning • Computer Vision</p>
-                        <p class="project-description">A neural network model for recognizing handwritten digits using deep learning and computer vision techniques.</p>
+                        <h3>Digit Recognition</h3>
+                        <p>Neural network model for handwritten digit recognition.</p>
                         <div class="project-tech">
                             <span>Python</span>
                             <span>TensorFlow</span>
-                            <span>Deep Learning</span>
-                            <span>Computer Vision</span>
+                            <span>CV</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/Edwinjoseph0210/Handwritten-Digit-Recognition" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
+                                <i class="fab fa-github"></i> Code
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
+                    <div class="tech-logo-bg">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    </div>
                     <div class="project-info">
-                        <h3>Stock Price Predictor</h3>
-                        <p>Python • Machine Learning • Data Analysis</p>
-                        <p class="project-description">A machine learning model for stock price prediction using historical data analysis and time series forecasting.</p>
+                        <h3>Stock Predictor</h3>
+                        <p>ML model for stock price prediction using time series analysis.</p>
                         <div class="project-tech">
                             <span>Python</span>
-                            <span>Machine Learning</span>
-                            <span>Data Analysis</span>
+                            <span>ML</span>
                             <span>Time Series</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/Edwinjoseph0210/Stock-Price-Predictor" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
+                                <i class="fab fa-github"></i> Code
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
+                    <div class="tech-logo-bg">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    </div>
                     <div class="project-info">
                         <h3>Fake News Detector</h3>
-                        <p>Python • Machine Learning • NLP</p>
-                        <p class="project-description">A machine learning model to detect fake news articles using natural language processing and text classification.</p>
+                        <p>NLP-based system for detecting fake news articles.</p>
                         <div class="project-tech">
                             <span>Python</span>
                             <span>NLP</span>
-                            <span>Machine Learning</span>
-                            <span>Text Classification</span>
+                            <span>ML</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/Edwinjoseph0210/Fake-News-Detector" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
+                                <i class="fab fa-github"></i> Code
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
+                    <div class="tech-logo-bg">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    </div>
                     <div class="project-info">
-                        <h3>Sentiment Analysis on Tweets</h3>
-                        <p>Python • NLP • Data Analysis</p>
-                        <p class="project-description">A natural language processing system for analyzing sentiment in tweets using machine learning algorithms.</p>
+                        <h3>Tweet Sentiment</h3>
+                        <p>Real-time sentiment analysis system for Twitter data.</p>
                         <div class="project-tech">
                             <span>Python</span>
                             <span>NLP</span>
-                            <span>Machine Learning</span>
-                            <span>Data Analysis</span>
+                            <span>ML</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/Edwinjoseph0210/Sentiment-Analysis-on-Tweets-" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
+                                <i class="fab fa-github"></i> Code
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
+                    <div class="tech-logo-bg">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    </div>
                     <div class="project-info">
-                        <h3>Voice Gender Recognition</h3>
-                        <p>Python • Audio Processing • Machine Learning</p>
-                        <p class="project-description">An AI system for gender recognition from voice samples using machine learning and audio processing techniques.</p>
+                        <h3>Voice Gender</h3>
+                        <p>AI system for gender recognition from voice samples.</p>
                         <div class="project-tech">
                             <span>Python</span>
-                            <span>Audio Processing</span>
-                            <span>Machine Learning</span>
-                            <span>Signal Processing</span>
+                            <span>Audio</span>
+                            <span>ML</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/Edwinjoseph0210/Voice-Gender-Recognition" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
+                                <i class="fab fa-github"></i> Code
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
+                    <div class="tech-logo-bg">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    </div>
                     <div class="project-info">
-                        <h3>Spam Email Classifier</h3>
-                        <p>Python • Machine Learning • Text Classification</p>
-                        <p class="project-description">An email spam detection system using machine learning and text classification algorithms.</p>
+                        <h3>Spam Classifier</h3>
+                        <p>Email spam detection using ML and text classification.</p>
                         <div class="project-tech">
                             <span>Python</span>
-                            <span>Machine Learning</span>
+                            <span>ML</span>
                             <span>NLP</span>
-                            <span>Text Classification</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/Edwinjoseph0210/Spam-Email-Classifier" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
+                                <i class="fab fa-github"></i> Code
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
+                    <div class="tech-logo-bg">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg" alt="Raspberry Pi">
+                    </div>
                     <div class="project-info">
-                        <h3>Air Quality Monitor</h3>
-                        <p>Python • IoT • Data Analysis</p>
-                        <p class="project-description">An IoT-based air quality monitoring system with real-time data analysis and visualization.</p>
+                        <h3>Air Quality</h3>
+                        <p>IoT-based air quality monitoring with real-time analysis.</p>
                         <div class="project-tech">
                             <span>Python</span>
                             <span>IoT</span>
-                            <span>Data Analysis</span>
-                            <span>Real-time Processing</span>
+                            <span>Data</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/Edwinjoseph0210/Air-Quality-Monitor" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
+                                <i class="fab fa-github"></i> Code
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
+                    <div class="tech-logo-bg">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                    </div>
                     <div class="project-info">
-                        <h3>Simple Crypto Wallet Generator</h3>
-                        <p>Java • ECC • Cryptography</p>
-                        <p class="project-description">A secure ECC-based cryptocurrency wallet address generator with advanced cryptographic features and key management.</p>
+                        <h3>Crypto Wallet</h3>
+                        <p>Secure ECC-based cryptocurrency wallet generator.</p>
                         <div class="project-tech">
                             <span>Java</span>
                             <span>ECC</span>
-                            <span>Cryptography</span>
-                            <span>Security</span>
+                            <span>Crypto</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/Edwinjoseph0210/Simple-Crypto-Wallet-Address-Generator-ECC-based-" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
+                                <i class="fab fa-github"></i> Code
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
+                    <div class="tech-logo-bg">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                    </div>
                     <div class="project-info">
-                        <h3>File Integrity Checker</h3>
-                        <p>Java • SHA-256 • Security</p>
-                        <p class="project-description">A robust file integrity verification system using SHA-256 hashing algorithm with real-time monitoring capabilities.</p>
+                        <h3>File Checker</h3>
+                        <p>File integrity verification using SHA-256 hashing.</p>
                         <div class="project-tech">
                             <span>Java</span>
                             <span>SHA-256</span>
-                            <span>File System</span>
                             <span>Security</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/Edwinjoseph0210/File-Integrity-Checker-with-SHA-256-" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
+                                <i class="fab fa-github"></i> Code
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
+                    <div class="tech-logo-bg">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    </div>
                     <div class="project-info">
                         <h3>Expense Tracker</h3>
-                        <p>Python • Data Management • UI</p>
-                        <p class="project-description">A comprehensive expense tracking application with data visualization, reporting features, and budget management.</p>
+                        <p>Personal finance tracking with data visualization.</p>
                         <div class="project-tech">
                             <span>Python</span>
-                            <span>Data Analysis</span>
+                            <span>Data</span>
                             <span>UI/UX</span>
-                            <span>Data Visualization</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/Edwinjoseph0210/Expense-Tracker" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
+                                <i class="fab fa-github"></i> Code
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
+                    <div class="tech-logo-bg">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    </div>
                     <div class="project-info">
-                        <h3>Simple Chat Server</h3>
-                        <p>Python • Networking • Socket Programming</p>
-                        <p class="project-description">A real-time chat application with client-server architecture, message encryption, and user authentication.</p>
+                        <h3>Chat Server</h3>
+                        <p>Real-time chat application with encryption.</p>
                         <div class="project-tech">
                             <span>Python</span>
-                            <span>Socket Programming</span>
-                            <span>Networking</span>
+                            <span>Socket</span>
                             <span>Security</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/Edwinjoseph0210/Simple-Chat-Server-and-Client" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
+                                <i class="fab fa-github"></i> Code
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
+                    <div class="tech-logo-bg">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    </div>
                     <div class="project-info">
-                        <h3>File Encryption Tool</h3>
-                        <p>Python • Cryptography • Security</p>
-                        <p class="project-description">A secure file encryption and decryption tool with multiple encryption algorithms and key management.</p>
+                        <h3>File Encryption</h3>
+                        <p>Secure file encryption tool with multiple algorithms.</p>
                         <div class="project-tech">
                             <span>Python</span>
-                            <span>Cryptography</span>
+                            <span>Crypto</span>
                             <span>Security</span>
-                            <span>File System</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/Edwinjoseph0210/File-Encryption-Decryption-Tool" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
+                                <i class="fab fa-github"></i> Code
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
+                    <div class="tech-logo-bg">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    </div>
                     <div class="project-info">
                         <h3>Finance Tracker</h3>
-                        <p>Python • Financial Analysis • Data Management</p>
-                        <p class="project-description">A personal finance tracking system with budget management, expense analysis, and investment tracking.</p>
+                        <p>Personal finance system with budget management.</p>
                         <div class="project-tech">
                             <span>Python</span>
-                            <span>Financial Analysis</span>
-                            <span>Data Management</span>
-                            <span>Data Visualization</span>
+                            <span>Finance</span>
+                            <span>Data</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/Edwinjoseph0210/finance_tracker" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
+                                <i class="fab fa-github"></i> Code
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
+                    <div class="tech-logo-bg">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    </div>
                     <div class="project-info">
-                        <h3>Disk Usage Analyzer</h3>
-                        <p>Python • System Analysis • Data Visualization</p>
-                        <p class="project-description">A comprehensive tool for analyzing and visualizing disk space usage patterns with detailed reporting.</p>
+                        <h3>Disk Analyzer</h3>
+                        <p>Disk space usage analysis and visualization tool.</p>
                         <div class="project-tech">
                             <span>Python</span>
-                            <span>System Analysis</span>
-                            <span>Data Visualization</span>
-                            <span>File System</span>
+                            <span>System</span>
+                            <span>Data</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/Edwinjoseph0210/Disk-Usage-Analyzer" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="tech-logo-bg">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg" alt="Raspberry Pi">
+                    </div>
+                    <div class="project-info">
+                        <h3>Smart Home</h3>
+                        <p>IoT-based home automation system with sensors.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>IoT</span>
+                            <span>Raspberry Pi</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Edwinjoseph0210" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="tech-logo-bg">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    </div>
+                    <div class="project-info">
+                        <h3>Weather App</h3>
+                        <p>Real-time weather tracking with API integration.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>API</span>
+                            <span>Data</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Edwinjoseph0210" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="tech-logo-bg">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    </div>
+                    <div class="project-info">
+                        <h3>Task Manager</h3>
+                        <p>Task management system with priority scheduling.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>UI/UX</span>
+                            <span>Data</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Edwinjoseph0210" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="tech-logo-bg">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    </div>
+                    <div class="project-info">
+                        <h3>Password Manager</h3>
+                        <p>Secure password storage with encryption.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Crypto</span>
+                            <span>Security</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Edwinjoseph0210" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="tech-logo-bg">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="OpenCV">
+                    </div>
+                    <div class="project-info">
+                        <h3>Image Editor</h3>
+                        <p>Basic image processing and editing tool.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>CV</span>
+                            <span>UI/UX</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Edwinjoseph0210" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="tech-logo-bg">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    </div>
+                    <div class="project-info">
+                        <h3>URL Shortener</h3>
+                        <p>URL shortening service with analytics.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Web</span>
+                            <span>Data</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Edwinjoseph0210" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="tech-logo-bg">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg" alt="Markdown">
+                    </div>
+                    <div class="project-info">
+                        <h3>Note Taking</h3>
+                        <p>Markdown-based note-taking application.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Markdown</span>
+                            <span>UI/UX</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Edwinjoseph0210" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="tech-logo-bg">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    </div>
+                    <div class="project-info">
+                        <h3>File Sync</h3>
+                        <p>File synchronization across devices.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Network</span>
+                            <span>Data</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Edwinjoseph0210" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="tech-logo-bg">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    </div>
+                    <div class="project-info">
+                        <h3>Code Editor</h3>
+                        <p>Lightweight code editor with syntax highlighting.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>UI/UX</span>
+                            <span>Text</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Edwinjoseph0210" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="tech-logo-bg">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    </div>
+                    <div class="project-info">
+                        <h3>Calendar App</h3>
+                        <p>Event management and scheduling system.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>UI/UX</span>
+                            <span>Data</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Edwinjoseph0210" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="tech-logo-bg">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    </div>
+                    <div class="project-info">
+                        <h3>Quiz App</h3>
+                        <p>Interactive quiz application with scoring.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>UI/UX</span>
+                            <span>Data</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Edwinjoseph0210" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Code
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+            <a href="https://github.com/Edwinjoseph0210" target="_blank" class="github-more-btn">
+                <i class="fab fa-github"></i>
+                View More Projects on GitHub
+            </a>
         </section>
 
-        <section class="certificates" id="certificates">
+        <section class="certificates glow-bg fade-in-section" id="certificates">
+            <div class="stars">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
             <div class="section-header">
                 <h2>Certificates</h2>
             </div>
@@ -685,7 +974,10 @@
             </div>
         </section>
 
-        <section class="google-certifications" id="google-certifications">
+        <section class="google-certifications glow-bg fade-in-section" id="google-certifications">
+            <div class="stars">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
             <div class="section-header">
                 <h2>Google Cloud Achievements</h2>
             </div>
@@ -725,7 +1017,10 @@
             </div>
         </section>
 
-        <section class="contact" id="contact">
+        <section class="contact glow-bg fade-in-section" id="contact">
+            <div class="stars">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
             <div class="section-header">
                 <h2>Contact</h2>
             </div>
@@ -768,7 +1063,7 @@
                                     <i class="fab fa-twitter"></i>
                                     <span>Twitter</span>
                                 </a>
-                                <a href="https://www.instagram.com/eddyroger0210/" target="_blank" class="social-link">
+                                <a href="https://www.instagram.com/its_me_eddy_02/" target="_blank" class="social-link">
                                     <i class="fab fa-instagram"></i>
                                     <span>Instagram</span>
                                 </a>
@@ -792,7 +1087,7 @@
                 <a href="https://github.com/Edwinjoseph0210" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/edwinjoseph0210/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://www.instagram.com/its_me_eddy_02/" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com/eddyroger0210/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/its_me_eddy_02/" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
             <p class="copyright">© 2024 Edwin Joseph. All rights reserved.</p>
         </div>

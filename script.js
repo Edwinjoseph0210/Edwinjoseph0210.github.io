@@ -315,15 +315,50 @@ if (navToggle && navLinks) {
 
 // Hide/show navigation on scroll direction
 const mainNav = document.querySelector('.main-nav');
-let lastScrollY = 0; // Initialize to 0
+let lastScrollY = window.scrollY;
+let isScrolling = false;
 
 window.addEventListener('scroll', () => {
-    const currentScrollY = window.scrollY;
-
-    if (currentScrollY > lastScrollY && currentScrollY > 70) { // Scrolling down and past initial header height
-        mainNav.classList.add('hidden');
-    } else if (currentScrollY < lastScrollY) { // Scrolling up
-        mainNav.classList.remove('hidden');
+    if (!isScrolling) {
+        window.requestAnimationFrame(() => {
+            const currentScrollY = window.scrollY;
+            const scrollDifference = currentScrollY - lastScrollY;
+            
+            // Add scrolled class for styling
+            if (currentScrollY > 50) {
+                mainNav.classList.add('scrolled');
+            } else {
+                mainNav.classList.remove('scrolled');
+            }
+            
+            // Hide/show navigation based on scroll direction
+            if (scrollDifference > 0 && currentScrollY > 100) {
+                // Scrolling down
+                mainNav.style.transform = 'translateY(-100%)';
+            } else if (scrollDifference < 0) {
+                // Scrolling up
+                mainNav.style.transform = 'translateY(0)';
+            }
+            
+            lastScrollY = currentScrollY;
+            isScrolling = false;
+        });
     }
-    lastScrollY = currentScrollY;
+    isScrolling = true;
+});
+
+// Tech Stack Circle Setup
+document.addEventListener('DOMContentLoaded', function() {
+    const techItems = document.querySelectorAll('.tech-item');
+    
+    // Set CSS variables for the circle
+    const totalItems = techItems.length;
+    const radius = 350;
+    document.documentElement.style.setProperty('--total-items', totalItems);
+    document.documentElement.style.setProperty('--radius', `${radius}px`);
+
+    // Set the index for each item
+    techItems.forEach((item, index) => {
+        item.style.setProperty('--i', index);
+    });
 }); 

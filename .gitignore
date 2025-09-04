@@ -1,0 +1,6 @@
+# Ignore backups
+_backup_*
+
+# macOS
+.DS_Store
+
